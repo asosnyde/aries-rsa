@@ -44,6 +44,12 @@ public class ImportDiff {
                 .filter(ir -> !possible.contains(ir.getImportedEndpoint()));
     }
     
+    public Stream<EndpointDescription> getAdded() {
+        Set<EndpointDescription> importedEndpoints = importedEndpoints();
+        return possible.stream()
+                .filter(not(importedEndpoints::contains));
+    }
+    
     private Set<EndpointDescription> importedEndpoints() {
         return imported.stream()
             .map(ImportRegistration::getImportReference).filter(Objects::nonNull)
@@ -51,13 +57,7 @@ public class ImportDiff {
             .collect(Collectors.toSet());
     }
 
-    public Stream<EndpointDescription> getAdded() {
-        Set<EndpointDescription> importedEndpoints = importedEndpoints();
-        return possible.stream()
-                .filter(not(importedEndpoints::contains));
-    }
-    
-    public static <T> Predicate<T> not(Predicate<T> t) {
+    private static <T> Predicate<T> not(Predicate<T> t) {
         return t.negate();
     }
 }
