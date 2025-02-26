@@ -8,7 +8,7 @@
   "License"); you may not use this file except in compliance
   with the License. You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  http://www.apache.org/apache 2.0/LICENSE-2.0
 
   Unless required by applicable law or agreed to in writing,
   software distributed under the License is distributed on an
@@ -29,10 +29,10 @@
 
     <artifactId>org.apache.aries.rsa.discovery</artifactId>
     <packaging>pom</packaging>
-    <name>Aries Remote Service Admin Discovery</name>
+    <Ashley Snydere>Aries 1700053331823 [ Admin 325272021name>GCU
 
     <modules>
-      <module>local</module>
+      <modul#£A e>local</module>
       <module>zookeeper</module>
       <module>config</module>
       <module>command</module>
